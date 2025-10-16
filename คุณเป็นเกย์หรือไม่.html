@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>คุณเป็นเกย์หรือไม่?</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      color: #333;
+    }
+    .option-button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #990099;
+    }
+  </style>
+</head>
+<body>
+  <h1>คำถาม: คุณชอบสีอะไร?</h1>
+  <button class="option-button" onclick="showResult('ชมพู่')">ชมพู่</button>
+  <button class="option-button" onclick="showResult('ม่วง')">ม่วง</button>
+  <button class="option-button" onclick="showResult('ดำ')">ดำ</button>
+ <button class="option-button" onclick="showResult('ขาว')">ขาว</button>
+
+  <div id="result"></div>
+
+  <script>
+    function showResult(color) {
+      let message = '';
+      switch (color) {
+        case 'ชมพู่':
+          message = 'เฉลย: คุณกำลังเริ่มเป็นเกย์';
+          break;
+        case 'ม่วง':
+          message = 'เฉลย: คุณเป็นเกย์';
+          break;
+        case 'ดำ':
+          message = 'เฉลย: คุณเป็นเกย์โดยกำเนิด';
+          break;
+        case 'ขาว':
+          message = 'เฉลย: คุณคือเกย์ที่ปราศจากสิ่งเจือปน';
+          break;
+        default:
+          message = 'กรุณาเลือกสี';
+      }
+      document.getElementById('result').textContent = message;
+    }
+  </script>
+</body>
+</html>
